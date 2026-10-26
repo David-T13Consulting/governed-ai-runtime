@@ -1,0 +1,250 @@
+{
+ "note": "M6b S1 manifest (protocol item 5). Model files: read from the Hugging Face API on 9 Oct 11:52 (session 43, draft); revisions re-read unchanged on 2026-10-09 14:32 (session 44), so the file list, sizes and SHA-256 stand. A newer revision before S2 is a new candidate. No weights downloaded in S1.",
+ "read_at": "2026-10-09T11:52:53+0200",
+ "revisions_rechecked_at": "2026-10-09T14:32:11+0200",
+ "models": [
+  {
+   "repository": "google/embeddinggemma-2",
+   "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+   "lastModified": "2026-10-06T15:29:23.000Z",
+   "files": [
+    {
+     "path": ".gitattributes",
+     "size": 1301,
+     "sha256": "bcdccfaa66bc1240c7192dbd374cfb39b695bb1d8ff6b7ce0113aa5e9ac21a44"
+    },
+    {
+     "path": "1_Pooling/config.json",
+     "size": 90,
+     "sha256": "8759bdf7c77efc7df7723f64856a593c8943b71ee38baf2a88771fbaf78438f9"
+    },
+    {
+     "path": "2_Normalize/config.json",
+     "size": 97,
+     "sha256": "cdb09dfca347a56aa2d691744e38d5ad3c7cbc2834e7181272b9a15328b82524"
+    },
+    {
+     "path": "README.md",
+     "size": 21730,
+     "sha256": "b677a0ee2818c36f091b65fd3d9b4baea9f04d53b02b49cae916c74bf9682037"
+    },
+    {
+     "path": "chat_template.jinja",
+     "size": 1016,
+     "sha256": "4b852efc0b9960283e735363331e6f325b33bc74bdbaa076f595bc4e9b94d85e"
+    },
+    {
+     "path": "config.json",
+     "size": 4455,
+     "sha256": "b8f1e9931b57fbc054acdb445c41765d55b0074c58d145fa82839941ad1b5bb3"
+    },
+    {
+     "path": "config_sentence_transformers.json",
+     "size": 1565,
+     "sha256": "031e56a498d33c349ab489a21885bcfe25b4fcba841149dc99e1e90d4a7c28f5"
+    },
+    {
+     "path": "model.safetensors",
+     "size": 1488915288,
+     "sha256": "197a32965d4b1105faf060417baa899e193fb73cd401f42ec9295234d5553d79"
+    },
+    {
+     "path": "modules.json",
+     "size": 413,
+     "sha256": "3d02572a0455b832de67fb8e63a54981bc7e8b46e337c95e917bd8122a533bfd"
+    },
+    {
+     "path": "preprocessor_config.json",
+     "size": 511,
+     "sha256": "ea2ae257e901064abdd98dceb19f2b0da06af600bed15e0f99f5c85c37ee9d78"
+    },
+    {
+     "path": "processor_config.json",
+     "size": 1788,
+     "sha256": "168f6a08522f3ce5dea596d94d003af2fd691742d4f41fe1f9d8cce76bfbf69c"
+    },
+    {
+     "path": "sentence_bert_config.json",
+     "size": 747,
+     "sha256": "b1bcd9f2dce3ae863b359e87d0710b5dbc3314a59ecb4e2f97c7778fc8e4b228"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 32170510,
+     "sha256": "4d777ef5bdc1aa36227abdfb77c3e49e7b9c892d16e1b6bda41c393504828be4"
+    },
+    {
+     "path": "tokenizer.model",
+     "size": 4689013,
+     "sha256": "e594c8a90eb08d8bda498ff4747977dc827ae0c3c56b5c0d41a605a22d02ef03"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 1599,
+     "sha256": "17bd5d6e9364ca49a534e1502076593317c298d4a663623091ed45388f004874"
+    }
+   ],
+   "total_bytes": 1525810123
+  },
+  {
+   "repository": "Qwen/Qwen3-Embedding-0.6B",
+   "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+   "lastModified": "2026-04-20T02:45:58.000Z",
+   "files": [
+    {
+     "path": ".gitattributes",
+     "size": 1570,
+     "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+    },
+    {
+     "path": "1_Pooling/config.json",
+     "size": 313,
+     "sha256": "37bf193fa101f19101bfad9c31d3eb0f786e247b7b1e5cb7f007d730eed1ddbd"
+    },
+    {
+     "path": "README.md",
+     "size": 17237,
+     "sha256": "c34d9b7e5a267ad3fdd13227a253686bc90844ff4744a2a6a86c7c905e3d06f3"
+    },
+    {
+     "path": "config.json",
+     "size": 727,
+     "sha256": "b5bf1f51fc45be473a54718cef92448d90a1be001bf9b9a44b8c7f10a19feaa9"
+    },
+    {
+     "path": "config_sentence_transformers.json",
+     "size": 215,
+     "sha256": "10667c72ddb772627bf1780cb7f86af8e2ae0032b8c243c731172064105c6961"
+    },
+    {
+     "path": "generation_config.json",
+     "size": 117,
+     "sha256": "28396d421a2108acce96383f6a7de78008f7f1b17f807958f3c14c51dbfb65fb"
+    },
+    {
+     "path": "merges.txt",
+     "size": 1671853,
+     "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+     "path": "model.safetensors",
+     "size": 1191586416,
+     "sha256": "0437e45c94563b09e13cb7a64478fc406947a93cb34a7e05870fc8dcd48e23fd"
+    },
+    {
+     "path": "modules.json",
+     "size": 349,
+     "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+    },
+    {
+     "path": "tokenizer.json",
+     "size": 11423705,
+     "sha256": "def76fb086971c7867b829c23a26261e38d9d74e02139253b38aeb9df8b4b50a"
+    },
+    {
+     "path": "tokenizer_config.json",
+     "size": 9706,
+     "sha256": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0"
+    },
+    {
+     "path": "vocab.json",
+     "size": 2776833,
+     "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+   ],
+   "total_bytes": 1207489041
+  }
+ ],
+ "python": {
+  "interpreter": "/opt/homebrew/opt/python@3.12/bin/python3.12",
+  "version": "3.12.15",
+  "origin": "Homebrew formula python@3.12 3.12.15, installed by David 9 Oct 11:59 (Q92)",
+  "machine": "arm64"
+ },
+ "venv": {
+  "path": "~/Library/Application Support/dbrain/venvs/m6b-py312",
+  "outside": "vault, iCloud and git",
+  "size": "1.0 GB",
+  "requested_pins": [
+   "sentence-transformers==6.1.0",
+   "transformers==5.19.0",
+   "torch==2.14.1"
+  ],
+  "pip_freeze": [
+   "annotated-doc==0.0.5",
+   "anyio==4.15.1",
+   "certifi==2026.7.22",
+   "click==8.5.0",
+   "cloudpickle==3.1.2",
+   "filelock==4.0.12",
+   "fsspec==2026.9.0",
+   "h11==0.16.0",
+   "hf-xet==1.7.0",
+   "httpcore==1.0.9",
+   "httpx==0.28.1",
+   "huggingface_hub==1.33.0",
+   "idna==3.20",
+   "Jinja2==3.1.6",
+   "joblib==1.6.0",
+   "markdown-it-py==4.2.0",
+   "MarkupSafe==3.0.4",
+   "mdurl==0.1.2",
+   "mpmath==1.3.0",
+   "narwhals==2.26.0",
+   "networkx==3.7",
+   "numpy==2.5.3",
+   "packaging==26.3",
+   "Pygments==2.21.0",
+   "PyYAML==6.0.3",
+   "regex==2026.9.29",
+   "rich==15.0.0",
+   "safetensors==0.8.0",
+   "scikit-learn==1.9.1",
+   "scipy==1.18.1",
+   "sentence-transformers==6.1.0",
+   "setuptools==84.0.0",
+   "shellingham==1.5.4",
+   "sympy==1.14.0",
+   "threadpoolctl==3.7.0",
+   "tokenizers==0.23.3",
+   "torch==2.14.1",
+   "tqdm==4.70.1",
+   "transformers==5.19.0",
+   "typer==0.27.3",
+   "typing_extensions==4.16.0"
+  ],
+  "mps_available": true,
+  "added_after_s3": [
+   {
+    "package": "pillow==12.3.0",
+    "why": "Q96 (a), David 9 Oct: sentence-transformers builds EmbeddingGemma 2's processor even for text and needs PIL (transformers[vision] declares Pillow>=10.0.1,<=15.0)",
+    "installed_at": "2026-10-12T13:42+0200 (session 46)",
+    "command": "pip install --no-deps pillow==12.3.0 (into this venv only)",
+    "wheel": "pillow-12.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+    "wheel_bytes": 4780323,
+    "wheel_sha256": "ffd0c5368496f41b0944be820fcb7a838aa6e623d250b01acf2643939c3f99d7",
+    "version_list_evidence": "artifacts/m6b/s4-pillow-versions-20261012-1342.txt (pip index versions, before the install)",
+    "venv_size_after": "1.1 GB"
+   },
+   {
+    "package": "torchvision==0.29.1",
+    "why": "S4 attempt 1 (12 Oct 13:42): arm B still failed after Pillow: EmbeddingGemma2Processor imports torchvision. Declared by transformers' `vision` extra (Requires-Dist: torchvision; extra == \"vision\"), the same extra Q96 followed; standing approval (4), D127",
+    "version_choice": "0.29.1 declares torch>=2.14.0, matching the pinned torch 2.14.1; installed with --no-deps, so torch is unchanged",
+    "installed_at": "2026-10-12T13:44+0200 (session 46)",
+    "wheel": "torchvision-0.29.1-cp312-cp312-macosx_14_0_arm64.whl",
+    "wheel_bytes": 1813847,
+    "wheel_sha256": "3b6eb9d2f8fe9b93d9d37637749df361efeed133d96ddd503184a1b5b12bb27f",
+    "version_list_evidence": "artifacts/m6b/s4-torchvision-versions-20261012.txt (pip index versions, before the install)",
+    "venv_size_after": "1.1 GB"
+   }
+  ]
+ },
+ "disk": {
+  "free_before_venv": "78 GiB",
+  "free_after_venv": "76 GiB",
+  "models_folder": "15 GB",
+  "budget_gb": 25,
+  "weights_to_download_bytes": 2733299164,
+  "budget_accounting": "D100 covers weights and runtimes, 25 GB: T9/M6 allocation about 18.25 GB (models folder measures 15 GB) + this venv 1.0 GB + S2 weights 2.73 GB = about 22.0 GB, about 3 GB spare"
+ }
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# Raw traces, reports and measurement evidence (Q23). Never committed, never in the vault.
+artifacts/
+# macOS Finder metadata (M1).
+.DS_Store

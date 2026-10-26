@@ -1,0 +1,96 @@
+{
+ "about": "P2.5 F0: the lead's read of actual answers, one per case and answer SHA-256 (status and answer text). A changed answer needs a new read. Kept apart from the scorer's automatic outcome. Read of the F0 baseline (artifacts/p25/f0-baseline.json, Gemma 4 E4B, 9 Oct, session 44): all 13 answers read; every verdict agrees with the automatic outcome.",
+ "reads": [
+  {
+   "case": "a1-row-term-absent",
+   "answer_sha256": "00d6267ee1e0ce68139182bbe71c149c7d0a6212f828781ee102026ebf51a859",
+   "verdict": "fail",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Gives the right row (normal rehearsal 10:00-12:00 on Sat 10 Oct) and a true extra row (the hiking outing), but never says the note does not use 'cantata': fails F0's row contract."
+  },
+  {
+   "case": "a2-row-term-absent",
+   "answer_sha256": "e1f54d0176d0b60101cffa3dd9ccb040640c27f382dc550e746097d91f9155d2",
+   "verdict": "fail",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Gives the right row (dress rehearsal 09:00-13:00 on Sat 24 Oct), but does not say the note does not use 'vocal group'."
+  },
+  {
+   "case": "a3-row-term-absent-fr",
+   "answer_sha256": "46445f9c9ad99d121a35d75f4be2a0ea35f180ec32981e942bc1ac79089cedb9",
+   "verdict": "fail",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Declined: the French explicit date retrieved nothing (layer-4 gap noted in the Outcome); a row case cannot pass a decline."
+  },
+  {
+   "case": "a4-row-term-absent-relative",
+   "answer_sha256": "21882b05db29e297aafad9ba4d341125126068d648aa0ae7848700e081913f3e",
+   "verdict": "fail",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Right row for 'tomorrow' (Sat 10 Oct, 10:00-12:00), no statement that 'cantata' is not the note's word."
+  },
+  {
+   "case": "a5-row-group-name-absent",
+   "answer_sha256": "1b4358a8e3df6364cdb6c8365568bd625debcd5f04d0eb05414222c787824972",
+   "verdict": "fail",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Right row (normal outing 14:00-17:30) and a true extra row (choir), no statement that 'Trailblazers' is not in the note."
+  },
+  {
+   "case": "a6-row-group-name-absent-weekday",
+   "answer_sha256": "1db6e4565603e95e7c0664f2e328c4ddb27b54259b43d963dd7a3e5585027817",
+   "verdict": "fail",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Both Saturday rows, correct, no statement that 'Trailblazers' is not in the note."
+  },
+  {
+   "case": "b1-no-row",
+   "answer_sha256": "50dddaf1c130857cfa05c77133cb15ee6aa67864babe025ed4e5b40f094a6bd5",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "'Nothing found' for the asked date, which has no row: correct."
+  },
+  {
+   "case": "b2-no-row",
+   "answer_sha256": "c17c3f9d4bac3ddb23df07cfa681bf3d0eff53f5f0e8d8ed387c7d99d47c6158",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "'Nothing found' for the asked date, which has no row: correct."
+  },
+  {
+   "case": "c1-negated-row",
+   "answer_sha256": "42eb71518bc5e90c0b01abac43fe8f6e053d8bdc58c4ed0de9419c042f381bfc",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Correct no, citing the note's own 'No rehearsal (autumn break)' row."
+  },
+  {
+   "case": "c2-negated-row-term-absent",
+   "answer_sha256": "560337a3b4f514a9564139551ea62676ee51953f9af961c44da0cd08d925fef8",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Correct no from the note's own 'no rehearsal' row; awkward wording ('it is a no rehearsal') but not wrong."
+  },
+  {
+   "case": "c3-negated-row",
+   "answer_sha256": "3309c925f83c6ab62616014f419b093954699f545200aa088f00fbc6096540fb",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "Correct no: the note lists 'No class (holiday)' on Wed 28 Oct."
+  },
+  {
+   "case": "d1-other-activity-row",
+   "answer_sha256": "5fdf24de0b377ee9c241955d503994bf0b85b766fd1e6d12ee9baffa6ec1db4c",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "'Nothing found' for the choir on Sat 31 Oct: correct; it does not answer from the other activities' rows that day."
+  },
+  {
+   "case": "d2-other-activity-row",
+   "answer_sha256": "e2729ea1a0a12c6c3a9780f5e261bf2e97c734efab85bea986e90d401636902d",
+   "verdict": "pass",
+   "by": "lead (claude-opus-5-5), 9 Oct, session 45",
+   "why": "'Nothing found' on Tue 13 Oct for the choir: correct; the paper bin collection that day is not offered as an answer."
+  }
+ ]
+}

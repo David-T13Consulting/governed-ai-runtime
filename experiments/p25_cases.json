@@ -1,0 +1,375 @@
+{
+ "about": "P2.5 slice F0-F3: regression cases for 'the row exists but the answer says no'. Synthetic notes and questions only: no wording from David's phone, no children, names or places. Asked through the phone path on a fixed test date. The hiking club's group name (Trailblazers) is never written in its note, like a word only its members use. Ground truth per case: the asked `activity` and `date`; for a row case its `expect_start` and the `absent_terms` the note does not use; `asked_terms` are the question's words for the event. `activities` lists the words that may name each activity in an answer; `facts` is every calendar row of the notes (a `none` row says there is no event). An alias listed under an activity's `specific` names that one calendar event; any other alias names the activity in general.",
+ "retrieval_aliases": [
+  {"words": ["trailblazers", "trailblazer"], "notes_say": ["hiking", "outing"]},
+  {"words": ["cantata", "cantatas"], "notes_say": ["choir", "rehearsal"]},
+  {"words": ["chorale"], "notes_say": ["choir", "rehearsal"]},
+  {"words": ["vocal"], "notes_say": ["choir", "rehearsal"]}
+ ],
+ "today": "2026-10-09",
+ "notes": {
+  "20 Areas/Hobbies/choir-2026-27.md": "---\nclassification: internal\n---\n# Choir: 2026-2027\n\n**Normal rehearsal:** Saturday 10:00-12:00 at the community hall.\n\n## Calendar\n| Date | Event | Time |\n|---|---|---|\n| Sat 3 Oct | Normal rehearsal | 10:00-12:00 |\n| Sat 10 Oct | Normal rehearsal | 10:00-12:00 |\n| Sat 17 Oct | No rehearsal (autumn break) | - |\n| Sat 24 Oct | Dress rehearsal for the concert | 09:00-13:00 |\n| Sat 7 Nov | Normal rehearsal | 10:00-12:00 |\n| Sat 21 Nov | Normal rehearsal | 10:00-12:00 |\n",
+  "20 Areas/Hobbies/pottery-2026-27.md": "---\nclassification: internal\n---\n# Pottery class: 2026-2027\n\n## Calendar\n| Date | Event | Time |\n|---|---|---|\n| Wed 14 Oct | Pottery class | 19:00-21:00 |\n| Wed 28 Oct | No class (holiday) | - |\n| Sat 31 Oct | Open studio day | 13:00-16:00 |\n",
+  "20 Areas/Home/bin-collection.md": "---\nclassification: internal\n---\n# Bin collection\n\n| Date | Bin |\n|---|---|\n| Tue 13 Oct | Paper |\n| Tue 20 Oct | Glass |\n",
+  "20 Areas/Hobbies/hiking-club-2026-27.md": "---\nclassification: internal\n---\n# Hiking club: 2026-2027\n\n**Normal outing:** Saturday 14:00-17:30, from the club house.\n\n## Calendar\n| Date | Event | Time |\n|---|---|---|\n| Sat 26 Sep | Normal outing | 14:00-17:30 |\n| Sat 3 Oct | Dinner at the club house | from 18:30 |\n| Sat 10 Oct | Normal outing | 14:00-17:30 |\n| Sat 17 Oct | Normal outing | 14:00-17:30 |\n| Sat 31 Oct | Night walk | 17:30-20:30 |\n| Sat 7 Nov | Normal outing | 14:00-17:30 |\n| Sat 5 Dec | Normal outing | 14:00-17:30 |\n"
+ },
+ "cases": [
+  {
+   "id": "a1-row-term-absent",
+   "type": "row",
+   "question": "Is there cantata practice on Sat 10 Oct?",
+   "date": "2026-10-10",
+   "absent_terms": [
+    "cantata",
+    "cantata practice"
+   ],
+   "activity": "choir",
+   "asked_terms": [
+    "cantata practice",
+    "cantata"
+   ],
+   "expect_start": "10:00"
+  },
+  {
+   "id": "a2-row-term-absent",
+   "type": "row",
+   "question": "What time is the vocal group on Saturday 24 October?",
+   "date": "2026-10-24",
+   "absent_terms": [
+    "vocal group",
+    "vocal"
+   ],
+   "activity": "choir",
+   "asked_terms": [
+    "vocal group meeting",
+    "vocal group"
+   ],
+   "expect_start": "09:00"
+  },
+  {
+   "id": "a3-row-term-absent-fr",
+   "type": "row",
+   "question": "Y a-t-il chorale samedi 7 novembre ?",
+   "date": "2026-11-07",
+   "absent_terms": [
+    "chorale"
+   ],
+   "activity": "choir",
+   "asked_terms": [
+    "chorale"
+   ],
+   "expect_start": "10:00"
+  },
+  {
+   "id": "a4-row-term-absent-relative",
+   "type": "row",
+   "question": "Is there cantata practice tomorrow?",
+   "date": "2026-10-10",
+   "absent_terms": [
+    "cantata",
+    "cantata practice"
+   ],
+   "activity": "choir",
+   "asked_terms": [
+    "cantata practice",
+    "cantata"
+   ],
+   "expect_start": "10:00"
+  },
+  {
+   "id": "a5-row-group-name-absent",
+   "type": "row",
+   "question": "Is there a Trailblazers outing on Sat 10 Oct?",
+   "date": "2026-10-10",
+   "absent_terms": [
+    "trailblazers"
+   ],
+   "activity": "hiking",
+   "asked_terms": [
+    "trailblazers outing",
+    "trailblazers"
+   ],
+   "expect_start": "14:00"
+  },
+  {
+   "id": "a6-row-group-name-absent-weekday",
+   "type": "row",
+   "question": "Trailblazers on Saturday?",
+   "date": "2026-10-10",
+   "absent_terms": [
+    "trailblazers"
+   ],
+   "activity": "hiking",
+   "asked_terms": [
+    "trailblazers outing",
+    "trailblazers"
+   ],
+   "expect_start": "14:00"
+  },
+  {
+   "id": "b1-no-row",
+   "type": "none",
+   "question": "Is there cantata practice on Sat 14 Nov?",
+   "activity": "choir",
+   "date": "2026-11-14",
+   "asked_terms": [
+    "cantata practice",
+    "cantata"
+   ]
+  },
+  {
+   "id": "b2-no-row",
+   "type": "none",
+   "question": "Is the vocal group meeting on Saturday 28 November?",
+   "activity": "choir",
+   "date": "2026-11-28",
+   "asked_terms": [
+    "vocal group meeting",
+    "vocal group"
+   ]
+  },
+  {
+   "id": "c1-negated-row",
+   "type": "negated",
+   "question": "Is there choir rehearsal on Sat 17 Oct?",
+   "activity": "choir",
+   "date": "2026-10-17",
+   "asked_terms": []
+  },
+  {
+   "id": "c2-negated-row-term-absent",
+   "type": "negated",
+   "question": "Cantata practice on Saturday 17 October?",
+   "activity": "choir",
+   "date": "2026-10-17",
+   "asked_terms": [
+    "cantata practice",
+    "cantata"
+   ]
+  },
+  {
+   "id": "c3-negated-row",
+   "type": "negated",
+   "question": "Is there a pottery class on Wed 28 Oct?",
+   "activity": "pottery",
+   "date": "2026-10-28",
+   "asked_terms": []
+  },
+  {
+   "id": "d1-other-activity-row",
+   "type": "other",
+   "question": "Is there choir rehearsal on Sat 31 Oct?",
+   "activity": "choir",
+   "date": "2026-10-31",
+   "asked_terms": []
+  },
+  {
+   "id": "d2-other-activity-row",
+   "type": "other",
+   "question": "Is there cantata practice on Tue 13 Oct?",
+   "activity": "choir",
+   "date": "2026-10-13",
+   "asked_terms": [
+    "cantata practice",
+    "cantata"
+   ]
+  }
+ ],
+ "activities": {
+  "choir": {
+   "aliases": [
+    "normal rehearsal",
+    "rehearsal",
+    "dress rehearsal",
+    "dress rehearsal for the concert",
+    "choir rehearsal",
+    "choir",
+    "répétition",
+    "répétition normale",
+    "chorale"
+   ],
+   "groups": [
+    "choir",
+    "the choir"
+   ],
+   "specific": {
+    "normal rehearsal": "Normal rehearsal",
+    "répétition normale": "Normal rehearsal",
+    "dress rehearsal": "Dress rehearsal for the concert",
+    "dress rehearsal for the concert": "Dress rehearsal for the concert"
+   }
+  },
+  "hiking": {
+   "aliases": [
+    "normal outing",
+    "outing",
+    "hike",
+    "hiking",
+    "night walk",
+    "dinner at the club house",
+    "sortie"
+   ],
+   "groups": [
+    "hiking club",
+    "the hiking club",
+    "club"
+   ],
+   "specific": {
+    "normal outing": "Normal outing",
+    "night walk": "Night walk",
+    "dinner at the club house": "Dinner at the club house"
+   }
+  },
+  "pottery": {
+   "aliases": [
+    "pottery class",
+    "class",
+    "open studio day",
+    "pottery",
+    "cours de poterie"
+   ],
+   "groups": [
+    "pottery class"
+   ],
+   "specific": {
+    "pottery class": "Pottery class",
+    "cours de poterie": "Pottery class",
+    "open studio day": "Open studio day"
+   }
+  },
+  "bins": {
+   "aliases": [
+    "paper",
+    "glass",
+    "bin collection",
+    "collection"
+   ],
+   "groups": [],
+   "specific": {
+    "paper": "Paper",
+    "glass": "Glass"
+   }
+  }
+ },
+ "facts": [
+  {
+   "activity": "choir",
+   "date": "2026-10-03",
+   "event": "Normal rehearsal",
+   "start": "10:00",
+   "end": "12:00"
+  },
+  {
+   "activity": "choir",
+   "date": "2026-10-10",
+   "event": "Normal rehearsal",
+   "start": "10:00",
+   "end": "12:00"
+  },
+  {
+   "activity": "choir",
+   "date": "2026-10-17",
+   "event": "No rehearsal (autumn break)",
+   "none": true
+  },
+  {
+   "activity": "choir",
+   "date": "2026-10-24",
+   "event": "Dress rehearsal for the concert",
+   "start": "09:00",
+   "end": "13:00"
+  },
+  {
+   "activity": "choir",
+   "date": "2026-11-07",
+   "event": "Normal rehearsal",
+   "start": "10:00",
+   "end": "12:00"
+  },
+  {
+   "activity": "choir",
+   "date": "2026-11-21",
+   "event": "Normal rehearsal",
+   "start": "10:00",
+   "end": "12:00"
+  },
+  {
+   "activity": "pottery",
+   "date": "2026-10-14",
+   "event": "Pottery class",
+   "start": "19:00",
+   "end": "21:00"
+  },
+  {
+   "activity": "pottery",
+   "date": "2026-10-28",
+   "event": "No class (holiday)",
+   "none": true
+  },
+  {
+   "activity": "pottery",
+   "date": "2026-10-31",
+   "event": "Open studio day",
+   "start": "13:00",
+   "end": "16:00"
+  },
+  {
+   "activity": "bins",
+   "date": "2026-10-13",
+   "event": "Paper"
+  },
+  {
+   "activity": "bins",
+   "date": "2026-10-20",
+   "event": "Glass"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-09-26",
+   "event": "Normal outing",
+   "start": "14:00",
+   "end": "17:30"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-10-03",
+   "event": "Dinner at the club house",
+   "start": "18:30"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-10-10",
+   "event": "Normal outing",
+   "start": "14:00",
+   "end": "17:30"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-10-17",
+   "event": "Normal outing",
+   "start": "14:00",
+   "end": "17:30"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-10-31",
+   "event": "Night walk",
+   "start": "17:30",
+   "end": "20:30"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-11-07",
+   "event": "Normal outing",
+   "start": "14:00",
+   "end": "17:30"
+  },
+  {
+   "activity": "hiking",
+   "date": "2026-12-05",
+   "event": "Normal outing",
+   "start": "14:00",
+   "end": "17:30"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+# AS1 step 3 (D131, Q107): see gates.py. If Python or the gate is missing, git refuses.
+top=$(git rev-parse --show-toplevel 2>/dev/null) || {
+  echo "COMMIT GATE ERROR: not inside a repository; refused (fail closed, AS1)" >&2; exit 2; }
+exec python3 -I "$top/.githooks/gates.py" --repo runtime commit-msg "$1"

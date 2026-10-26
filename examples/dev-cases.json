@@ -1,0 +1,12 @@
+[
+  {"id": "tempo_definition", "question": "What counts as a tempo session?", "expected_fragments": ["marathon pace or faster"]},
+  {"id": "easy_run", "question": "How should an easy run feel?", "expected_fragments": ["conversational"]},
+  {"id": "long_run", "question": "What pace is the long run?", "expected_fragments": ["longest run, at easy pace"]},
+  {"id": "client_label", "question": "Can a note labelled client reach a model?", "expected_fragments": ["Never; it does not belong in the vault"]},
+  {"id": "missing_label", "question": "What happens to a note with no classification label?", "expected_fragments": ["Absence of a label is not permission"]},
+  {"id": "failure_retention", "question": "How long are failed answers kept?", "expected_fragments": ["90 days"]},
+  {"id": "who_commits", "question": "Which agent commits changes?", "expected_fragments": ["Only the lead agent commits"]},
+  {"id": "hosted_first_dropped", "question": "Why was the hosted model plan dropped?", "expected_fragments": ["before anyone could check its classification"]},
+  {"id": "abstain_weather", "question": "Will it rain in Lisbon tomorrow?", "expected_fragments": []},
+  {"id": "abstain_salary", "question": "What is the owner's salary?", "expected_fragments": []}
+]

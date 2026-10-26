@@ -1,0 +1,5 @@
+(version 1)
+; M6b item 6: no outbound network at all while an arm scores, Unix sockets included (so the
+; system resolver cannot be reached either). Everything else as default.
+(allow default)
+(deny network-outbound)
